@@ -7,4 +7,6 @@ router.register(r'products', ProductViewSet)
 
 urlpatterns = [
     path('api/', include(router.urls)),
+    path('api/products/popular/', ProductViewSet.as_view({'get': 'popular'}), name='popular-products'),
+    ...
 ]
